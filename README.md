@@ -14,7 +14,9 @@ If you rename the service in the Render dashboard, use `https://<that-name>.onre
 2. Connect the GitHub repo and select this branch (`main`).
 3. Render reads [`render.yaml`](render.yaml): `npm ci && npm run build`, static publish **`dist`**.
 
-Use **Node 20+** (see `engines` in `package.json`). Do **not** set `GITHUB_PAGES_BASE_PATH` for Render—the app must stay at `/` on the hostname.
+Use **Node 20+** (see `engines` in `package.json`). Do **not** set `GITHUB_PAGES_BASE_PATH` for Render—the app must stay at `/` on the hostname. The blueprint clears it for builds; if you set it in the Render dashboard, remove it and **Manual Deploy → Clear build cache & deploy**.
+
+If the site shows **Not Found** for `/` and `/index.html`, open the service **Logs / Events**: the last deploy must be **Live** and the build log must show `Exported: dist`. A failed or empty build leaves nothing to serve.
 
 ### GitHub Pages
 

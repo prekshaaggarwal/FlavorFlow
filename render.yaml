@@ -3,5 +3,8 @@ services:
     name: exs-d7r3neflk1mc73cuq2h0
     runtime: static
     branch: main
-    buildCommand: npm ci && npm run build
-    staticPublishPath: dist
+    buildCommand: 'export GITHUB_PAGES_BASE_PATH="" && npm ci && npx expo export -p web --output-dir dist && test -f dist/index.html'
+    staticPublishPath: ./dist
+    envVars:
+      - key: GITHUB_PAGES_BASE_PATH
+        value: ""
