@@ -6,13 +6,13 @@ Food-discovery and ordering demo built with **Expo** (iOS · Android · **web**)
 
 ### Render (Blueprint)
 
-**https://exs-d7r3neflk1mc73cuq2h0.onrender.com**
+**https://exs-d7r3neflk1mc73cuq2h0-3hb5.onrender.com**
 
-If you rename the service in the Render dashboard, use `https://<that-name>.onrender.com` instead.
+If Render shows a slightly different subdomain (preview or renamed service), use the **HTTPS** URL from the service page in the dashboard.
 
 1. Open [Render Dashboard](https://dashboard.render.com) → **New** → **Blueprint**.
 2. Connect the GitHub repo and select this branch (`main`).
-3. Render reads [`render.yaml`](render.yaml): `npm ci && npm run build`, static publish **`dist`**.
+3. Render reads [`render.yaml`](render.yaml): `npm ci`, `expo export` to **`dist`**, with `GITHUB_PAGES_BASE_PATH` cleared for a root-hosted site.
 
 Use **Node 20+** (see `engines` in `package.json`). Do **not** set `GITHUB_PAGES_BASE_PATH` for Render—the app must stay at `/` on the hostname. The blueprint clears it for builds; if you set it in the Render dashboard, remove it and **Manual Deploy → Clear build cache & deploy**.
 

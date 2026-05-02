@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: exs-d7r3neflk1mc73cuq2h0
+    name: exs-d7r3neflk1mc73cuq2h0-3hb5
     runtime: static
     branch: main
     buildCommand: 'export GITHUB_PAGES_BASE_PATH="" && npm ci && npx expo export -p web --output-dir dist && test -f dist/index.html'
