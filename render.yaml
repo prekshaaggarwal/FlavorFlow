@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: flavorflow-demo
+    runtime: static
+    branch: main
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist

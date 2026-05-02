@@ -1,0 +1,11 @@
+#!/bin/sh
+# Re-run: git config core.hooksPath .githooks  (inside this repo)
+if test -z "$GIT_AUTHOR_EMAIL"; then :; fi
+if grep -qi "cursoragent@cursor.com" "$1" 2>/dev/null || grep -qi "Co-authored-by: Cursor" "$1" 2>/dev/null; then
+  echo ""
+  echo "Blocked: Cursor added a Co-authored-by trailer."
+  echo "Fix: Cursor Settings → search Git commit / co-author / trailer → turn OFF."
+  echo "Or amend without that line."
+  exit 1
+fi
+exit 0
