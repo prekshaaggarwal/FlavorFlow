@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: flavorflow-demo
+    name: exs-d7r3neflk1mc73cuq2h0
     runtime: static
     branch: main
     buildCommand: npm ci && npm run build

@@ -6,7 +6,7 @@ Food-discovery and ordering demo built with **Expo** (iOS · Android · **web**)
 
 ### Render (Blueprint)
 
-**https://exs-d7r3799kh4rs73ejt7rg.onrender.com**
+**https://exs-d7r3neflk1mc73cuq2h0.onrender.com**
 
 If you rename the service in the Render dashboard, use `https://<that-name>.onrender.com` instead.
 
